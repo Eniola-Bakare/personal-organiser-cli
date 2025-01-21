@@ -1,19 +1,25 @@
 {
-  "name": "personal-organiser-app",
+  "name": "personal-organizer-cli",
   "version": "1.0.0",
-  "description": "A command-lin App that manages tasks and notes using efficient data structures and algorithms.",
-  "main": "index.js",
+  "description": "A CLI tool for personal organization with task management, notes, and social networking features",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "organizer": "./src/index.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Eniola-Bakare/personal-organiser-cli.git"
-  },
-  "author": "Eniola Bakare",
+  "keywords": [
+    "cli",
+    "task-management",
+    "notes",
+    "organization"
+  ],
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Eniola-Bakare/personal-organiser-cli/issues"
-  },
-  "homepage": "https://github.com/Eniola-Bakare/personal-organiser-cli#readme"
+  "dependencies": {
+    "commander": "^11.1.0",
+    "inquirer": "^9.2.12"
+  }
 }

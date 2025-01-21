@@ -1,3 +1,4 @@
+// 1. Notes Management (String and Palindrome Check)
 class Node {
   constructor(value) {
     this.value = value;
@@ -5,7 +6,7 @@ class Node {
   }
 }
 
-class LinkedLists {
+export default class NotesManager {
   constructor() {
     this.head = null;
     this.length = 0;
@@ -32,9 +33,9 @@ class LinkedLists {
       node.next = this.head;
       this.head = node;
     }
-
     this.length++;
   }
+
   editNote(value, newValue) {
     if (this.isEmpty()) {
       console.log("Empty List");
@@ -56,6 +57,7 @@ class LinkedLists {
 
     return false;
   }
+
   deleteNote(index) {
     let counter = 0;
     let current = this.head;
@@ -79,6 +81,7 @@ class LinkedLists {
     console.log("Note successfully deleted", nodeToRemove);
     return nodeToRemove.value;
   }
+
   checkPalindrome() {
     if (this.isEmpty()) {
       console.log("The list is empty.");
@@ -134,23 +137,24 @@ class LinkedLists {
   }
 }
 
-const list = new LinkedLists();
+// Notes:
+// const list = new NotesManager();
 
-list.addNote("Super amazed. a man a plan a canal panama");
+// list.addNote("Super amazed. a man a plan a canal panama");
 
-list.addNote("Madam, in Eden, I'm Adam. wow");
-list.addNote("Pen ");
+// list.addNote("Madam, in Eden, I'm Adam. wow");
+// list.addNote("Pen ");
 
-console.log("HEAD: ", list.head);
-list.deleteNote(0);
-console.log("HEAD: ", list.head);
+// console.log("HEAD: ", list.head);
+// list.deleteNote(0);
+// console.log("HEAD: ", list.head);
 
-list.print();
+// list.print();
 
-list.editNote("wow", "CHANGED !");
+// list.editNote("wow", "CHANGED !");
 
-list.print();
+// list.print();
 
-console.log(list);
+// console.log(list);
 
-console.log(list.checkPalindrome());
+// console.log(list.checkPalindrome());
